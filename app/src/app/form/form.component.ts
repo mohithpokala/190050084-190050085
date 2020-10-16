@@ -26,18 +26,14 @@ export class FormComponent implements OnInit {
   func2():void{
     this.myForm.setValue(this.initial)
     this.loading=false;
-    this.myForm.valueChanges.subscribe(console.log)
   }
   get f() { return this.myForm.controls; }
   onSubmit() {
-    if (this.myForm.invalid) {
-      alert('Invalid data!! :-(')
-      return;
-    }
     this.dataService.post(JSON.stringify(this.myForm.value)).subscribe((res)=>{
-      console.log(res)
+      console.log(res);
+      alert('Succesfully Submitted')
     });
-    alert('We received Your submission')
+
+    
   }
 }
-
