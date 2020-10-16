@@ -1,0 +1,14 @@
+ul {
+    overflow: hidden;
+    color: blue;
+  }
+  
+  li a {
+    color:black;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    color: green;
+  }

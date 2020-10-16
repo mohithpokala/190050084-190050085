@@ -1,0 +1,24 @@
+<div *ngIf="!loading" class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name</label>
+      <input formControlName="name" ><br>
+      <div *ngIf="!loading&&f.name.errors" class="invalid-feedback">
+        <div *ngIf="f.name.errors.required">Name is required</div>
+      </div>
+      <label for="email">Email</label>
+      <input formControlName="email"><br>
+      <div *ngIf="!loading&&f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+      </div>
+      <label for="feedback">Feedback</label>
+      <input type="radio" formControlName="feedback" id= "Great" value="Great">
+      <label for="Great">Great</label>
+      <input type="radio" formControlName="feedback" id= "Okay" value="Okay">
+      <label for="Okay">Okay</label>
+      <input type="radio" formControlName="feedback" id= "Not Good" value="Not Good">
+      <label for="Not Good">Not Good</label><br>
+      <label for="message">Comment</label>
+      <textarea  formControlName="comment" style="height:200px"></textarea>
+      <input type="submit"  value="Submit"  style="cursor: pointer;">
+    </form></div>
