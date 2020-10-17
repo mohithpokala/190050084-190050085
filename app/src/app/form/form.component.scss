@@ -4,16 +4,15 @@
 
 input {
   &[formControlname=name], &[formControlname=email] {
-    font-weight: bold;
     background-color: #f2f2f2;
-    border: none;
-    border-bottom: 2px solid  #4CAF50;
-
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+    height: 33px;;
     &:focus {
-      outline: none;
+      border: none;
     }
   }
-
   &[type="radio"] {
     border-radius: 4px;
     resize: vertical;
@@ -24,14 +23,19 @@ textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   resize: vertical;
+  &:focus {
+    border: none;
+  }
 }
 
 label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 12px 12px 12px 0;
   display: inline-block;
+  color:#4CAF50;
+  font-weight: bold;
 }
 
 input[type=submit] {
@@ -42,7 +46,8 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 50%;
+  margin-left: 42.5%;
+  width: 15%;
 }
 
 .invalid-feedback {
@@ -52,46 +57,21 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
-.container {
+div{
   width: 50%;
-  height: fit-content;
-  position: relative;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-bottom: 5%;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.contain {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 50%;
-  position: relative;
   margin-left: 25%;
   margin-right: 25%;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+  position: relative;
+  &.container {
+    height: fit-content;
+    margin-bottom: 5%;
+  }
+  &.contain {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    color: lightseagreen;
+  }
 }

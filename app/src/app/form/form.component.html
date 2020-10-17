@@ -1,4 +1,5 @@
-<div *ngIf="!loading" class="container">
+<br><br><br>
+<div  class="container">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <label for="name">Name</label>
       <input formControlName="name" ><br>
@@ -19,7 +20,7 @@
       <input type="radio" formControlName="feedback" id= "Not Good" value="Not Good">
       <label for="Not Good">Not Good</label><br>
       <label for="message">Comment</label>
-      <textarea  formControlName="comment" style="height:200px"></textarea>
+      <textarea  formControlName="comment" ></textarea>
       <input type="submit"  value="Submit"  style="cursor: pointer;">
     </form></div>
 
