@@ -33,7 +33,6 @@ export class FormComponent implements OnInit {
       console.log(res);
       alert('Succesfully Submitted')
     });
-
-    
   }
 }
+
