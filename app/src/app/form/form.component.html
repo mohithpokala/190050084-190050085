@@ -2,16 +2,11 @@
 <div  class="container">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <label for="name">Name</label>
-      <input formControlName="name" ><br>
-      <div *ngIf="!loading&&f.name.errors" class="invalid-feedback">
-        <div *ngIf="f.name.errors.required">Name is required</div>
-      </div>
+      <input formControlName="name" >
+      <br>
       <label for="email">Email</label>
-      <input formControlName="email"><br>
-      <div *ngIf="!loading&&f.email.errors" class="invalid-feedback">
-        <div *ngIf="f.email.errors.required">Email is required</div>
-        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-      </div>
+      <input formControlName="email">
+      <br>
       <label for="feedback">Feedback</label>
       <input type="radio" formControlName="feedback" id= "Great" value="Great">
       <label for="Great">Great</label>
@@ -23,7 +18,13 @@
       <textarea  formControlName="comment" ></textarea>
       <input type="submit"  value="Submit"  style="cursor: pointer;">
     </form></div>
-
-
+    <div *ngIf="!loading&&f.name.errors" class="invalid-feedback">
+      <div *ngIf="f.name.errors.required">Name is required</div>
+    </div>
+    <div *ngIf="!loading&&f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
 <div *ngIf="!loading" class="contain">We fetched the following data from the server:<br>{{initial|json}}</div>
+<div class="contain">Your form value: {{myForm.value|json}}</div>
 
